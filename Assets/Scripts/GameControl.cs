@@ -8,31 +8,34 @@ public class GameControl : MonoBehaviour
     public int sceneToLoad;
     public List<GameObject> _cubeObjects;
     public List<GameObject> _inActiveCubeObjects;
-    private List<CubeControl> _cubeController;
+    public List<CubeControl> _cubeController;
 
     private void switchActiveCube()
     {
-		if(_cubeController[0].isRotating())
-			return;
+        if (_cubeController.Count == 0 || _inActiveCubeObjects.Count == 0)
+            return;
 
-        if (_inActiveCubeObjects.Count > 0)
-        {
-            GameObject inactiveObject = _inActiveCubeObjects[0];
-            GameObject activeObject = _cubeObjects[0];
+        if (_cubeController[0] == null || _inActiveCubeObjects[0] == null)
+            return;
 
-            Color inactiveColor = inactiveObject.GetComponent<SpriteRenderer>().color;
-            Color activeColor = activeObject.GetComponent<SpriteRenderer>().color;
-            inactiveObject.GetComponent<SpriteRenderer>().color = activeColor;
-            activeObject.GetComponent<SpriteRenderer>().color = inactiveColor;
+        if (_cubeController[0].isRotating())
+            return;
 
-            _inActiveCubeObjects.Remove(inactiveObject);
-            _cubeObjects.Remove(activeObject);
+        GameObject inactiveObject = _inActiveCubeObjects[0];
+        GameObject activeObject = _cubeController[0].getGameObject();
 
-            _inActiveCubeObjects.Add(activeObject);
-            _cubeObjects.Add(inactiveObject);
+        Color inactiveColor = inactiveObject.GetComponent<SpriteRenderer>().color;
+        Color activeColor = activeObject.GetComponent<SpriteRenderer>().color;
+        inactiveObject.GetComponent<SpriteRenderer>().color = activeColor;
+        activeObject.GetComponent<SpriteRenderer>().color = inactiveColor;
 
-			initCubeController();
-        }
+        _inActiveCubeObjects.Remove(inactiveObject);
+        _cubeObjects.Remove(activeObject);
+
+        _inActiveCubeObjects.Add(activeObject);
+        _cubeObjects.Add(inactiveObject);
+
+        initCubeController();
     }
 
     /// <summary>
@@ -41,15 +44,16 @@ public class GameControl : MonoBehaviour
     /// </summary>
     void Start()
     {
+        //Time.timeScale = 0.5F;
         initCubeController();
     }
 
-	void initCubeController()
-	{
-		_cubeController = new List<CubeControl>();
+    void initCubeController()
+    {
+        _cubeController = new List<CubeControl>();
         for (int i = 0; i < _cubeObjects.Count; i++)
             _cubeController.Add(new CubeControl(_cubeObjects[i]));
-	}
+    }
 
     /// <summary>
     /// Update is called every frame, if the MonoBehaviour is enabled.
@@ -64,10 +68,10 @@ public class GameControl : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 switchActiveCube();
-                continue;
+                break;
             }
 
-			_cubeObjects[i] = _cubeController[i].getGameObject();
+            _cubeObjects[i] = _cubeController[i].getGameObject();
             _cubeController[i].Update();
             if (_cubeController[i].hasEnteredGoal())
                 SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Single);

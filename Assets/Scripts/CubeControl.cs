@@ -21,7 +21,7 @@ public class CubeControl
     private void setGameObject(GameObject gameObject)
     {
         _gameObject = gameObject;
-        _transform = _gameObject.transform;
+        _transform = gameObject.transform;
     }
 
     public GameObject getGameObject()
@@ -66,7 +66,6 @@ public class CubeControl
     {
         float rayCastOriginPosY = _colliderHelper.bottom - rayCastOffset;
         Vector2 rayCastOrigin = new Vector2(_colliderHelper.center.x + posXOffset, rayCastOriginPosY);
-        Debug.DrawRay(rayCastOrigin, Vector2.down, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(rayCastOrigin, Vector2.down, rayCastOffset);
         return hit;
     }
@@ -87,7 +86,7 @@ public class CubeControl
             return false;
 
         float rayCastStartPosX = _rotateRight ? _colliderHelper.right + rayCastOffset : _colliderHelper.left - rayCastOffset;
-        Vector2 rayCastOrigin = new Vector2(rayCastStartPosX, _colliderHelper.bottom + rayCastOffset);
+        Vector2 rayCastOrigin = new Vector2(rayCastStartPosX, _colliderHelper.center.y);
         Vector2 rayCastDirection = _rotateRight ? Vector2.right : Vector2.left;
         RaycastHit2D hit = Physics2D.Raycast(rayCastOrigin, rayCastDirection, _colliderHelper.width / 2);
         return !hit || (hit && hit.collider.tag == finisthTag);
@@ -125,6 +124,7 @@ public class CubeControl
         _gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
         if (hasRotated90Degrees(_oldEulerAngles, _transform.eulerAngles))
         {
+            stopRotating();
             correctPositionToGrid();
             GameObject newGameObject = Object.Instantiate(_gameObject, _transform.position, new Quaternion());
             GameObject oldGameObject = _gameObject;
@@ -133,14 +133,13 @@ public class CubeControl
 
             setGameObject(newGameObject);
             GameObject.Destroy(oldGameObject);
-
-            stopRotating();
         }
     }
 
     private bool hitFinishGoald(Vector2 rayCastOrigin, Vector2 rayCastDirection)
     {
-        RaycastHit2D hit = Physics2D.Raycast(rayCastOrigin, rayCastDirection, rayCastOffset);
+        RaycastHit2D hit = Physics2D.Raycast(rayCastOrigin, rayCastDirection, rayCastOffset * 2);
+        Debug.DrawRay(rayCastOrigin, rayCastDirection, Color.red, 0.2F);
         return hit && hit.collider.tag == finisthTag;
     }
 
