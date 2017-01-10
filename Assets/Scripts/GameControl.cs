@@ -6,9 +6,11 @@ public class GameControl : MonoBehaviour
 {
 
     public int sceneToLoad;
+    public int sceneToLoadOnEscape = -1;
     public List<GameObject> _cubeObjects;
     public List<GameObject> _inActiveCubeObjects;
     public List<CubeControl> _cubeController;
+    public List<GameObject> _goals;
 
     private void switchActiveCube()
     {
@@ -18,7 +20,7 @@ public class GameControl : MonoBehaviour
         if (_cubeController[0] == null || _inActiveCubeObjects[0] == null)
             return;
 
-        if (_cubeController[0].isRotating())
+        if (_cubeController[0].isRotating() || !_cubeController[0].isGrounded())
             return;
 
         GameObject inactiveObject = _inActiveCubeObjects[0];
@@ -38,21 +40,34 @@ public class GameControl : MonoBehaviour
         initCubeController();
     }
 
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
-    void Start()
-    {
-        //Time.timeScale = 0.5F;
-        initCubeController();
-    }
-
-    void initCubeController()
+    private void initCubeController()
     {
         _cubeController = new List<CubeControl>();
         for (int i = 0; i < _cubeObjects.Count; i++)
             _cubeController.Add(new CubeControl(_cubeObjects[i]));
+    }
+
+    private bool shareGoalPositionAndScale(GameObject cubeObject, GameObject goal)
+    {
+        return goal.transform.position.Equals(cubeObject.transform.position) &&
+                goal.transform.transform.localScale.Equals(cubeObject.transform.localScale);
+    }
+
+    private bool goalHasBeenReached(GameObject goal)
+    {
+        for (int i = 0; i < _cubeObjects.Count; i++)
+            if (shareGoalPositionAndScale(_cubeObjects[i], goal))
+                return true;
+        return false;
+    }
+
+    private bool allGolasHaveBeenReached()
+    {
+        for (int i = 0; i < _goals.Count; i++)
+            if (!goalHasBeenReached(_goals[i]))
+                return false;
+
+        return true;
     }
 
     /// <summary>
@@ -62,7 +77,10 @@ public class GameControl : MonoBehaviour
     {
         for (int i = 0; i < _cubeObjects.Count; i++)
         {
-            if (_cubeController[i] == null)
+            if (_cubeObjects[i].transform.position.y < 0)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            if (_cubeController == null || _cubeController[i] == null)
                 continue;
 
             if (Input.GetKeyDown(KeyCode.Tab))
@@ -71,12 +89,38 @@ public class GameControl : MonoBehaviour
                 break;
             }
 
-            _cubeObjects[i] = _cubeController[i].getGameObject();
             _cubeController[i].Update();
-            if (_cubeController[i].hasEnteredGoal())
-                SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Single);
-            else if (Input.GetKeyDown(KeyCode.Escape))
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            _cubeObjects[i] = _cubeController[i].getGameObject();
+
         }
+        for (int i = 0; i < _inActiveCubeObjects.Count; i++)
+        {
+            GridManager.correctPositionToGrid(_inActiveCubeObjects[i].transform);
+        }
+
+        if (allGolasHaveBeenReached())
+            SceneManager.LoadScene(sceneToLoad);
+        else if (Input.GetKeyDown(KeyCode.Escape))
+            if (sceneToLoadOnEscape > -1)
+                SceneManager.LoadScene(sceneToLoadOnEscape);
+            else
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
+    {
+        initCubeController();
+    }
+
+    /// <summary>
+    /// Callback to draw gizmos that are pickable and always drawn.
+    /// </summary>
+    void OnDrawGizmos()
+    {
+        DebugHelper.drawRayFromPoint(new Vector2(), Color.yellow, 0);
     }
 }

@@ -46,10 +46,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BoxCollider2DHelper.cs" />
+     <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\CubeControl.cs" />
-     <Compile Include="Assets\Scripts\DebugScript.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
+     <Compile Include="Assets\Scripts\Grid\Grid.cs" />
+     <Compile Include="Assets\Scripts\Grid\GridManager.cs" />
+     <Compile Include="Assets\Scripts\HelperClasses\BaseHelperClass.cs" />
+     <Compile Include="Assets\Scripts\HelperClasses\BoxCollider2DHelper.cs" />
+     <Compile Include="Assets\Scripts\HelperClasses\CameraHelper.cs" />
+     <Compile Include="Assets\Scripts\HelperClasses\DebugHelper.cs" />
+     <Compile Include="Assets\Scripts\HelperClasses\LevelHelper.cs" />
+     <Compile Include="Assets\Scripts\MapCreatorController.cs" />
+     <Compile Include="Assets\Scripts\MenuController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
