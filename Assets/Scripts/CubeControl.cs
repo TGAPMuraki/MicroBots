@@ -12,7 +12,6 @@ public class CubeControl
     private bool _rotateLeft;
     private Vector3 _rotateVector;
     private const float rayCastOffset = 0.025f;
-    private const string finisthTag = "Finish";
 
     public CubeControl(GameObject gameObject)
     {
@@ -70,7 +69,7 @@ public class CubeControl
 
     private bool isGroundedLeft()
     {
-        return isGrounded((_colliderHelper.width / 2 + rayCastOffset * 10) * -1);
+        return isGrounded((_colliderHelper.width / 2 * -1) + rayCastOffset * 10);
     }
 
     private bool canRotate()
@@ -82,7 +81,7 @@ public class CubeControl
         Vector2 rayCastOrigin = new Vector2(rayCastStartPosX, _colliderHelper.bottom + rayCastOffset * 10);
         Vector2 rayCastDirection = _rotateRight ? Vector2.right : Vector2.left;
         RaycastHit2D hit = Physics2D.Raycast(rayCastOrigin, rayCastDirection, _colliderHelper.height / 2);
-        return !hit || (hit && hit.collider.tag == finisthTag);
+        return !hit;
     }
 
     private void checkInputForRotation()
@@ -133,15 +132,15 @@ public class CubeControl
             {
                 GridManager.correctPositionToGrid(_transform);
                 _rigidbody.velocity = new Vector2();
+                _colliderHelper = new BoxCollider2DHelper(_gameObject.GetComponent<BoxCollider2D>());
+                checkInputForRotation();
             }
             else
             {
                 GridManager.correctHorizontalPositionToGrid(_transform);
-                if(_rigidbody.velocity.y > 5)
+                if (_rigidbody.velocity.y > 5)
                     _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 5);
             }
-            _colliderHelper = new BoxCollider2DHelper(_gameObject.GetComponent<BoxCollider2D>());
-            checkInputForRotation();
         }
         if (isRotating())
             executeRotation();

@@ -58,6 +58,9 @@ public class GameControl : MonoBehaviour
         for (int i = 0; i < _cubeObjects.Count; i++)
             if (shareGoalPositionAndScale(_cubeObjects[i], goal))
                 return true;
+        for (int i = 0; i < _inActiveCubeObjects.Count; i++)
+            if (shareGoalPositionAndScale(_inActiveCubeObjects[i], goal))
+                return true;
         return false;
     }
 
@@ -78,7 +81,7 @@ public class GameControl : MonoBehaviour
         for (int i = 0; i < _cubeObjects.Count; i++)
         {
             if (_cubeObjects[i].transform.position.y < 0)
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
             if (_cubeController == null || _cubeController[i] == null)
                 continue;
@@ -97,9 +100,10 @@ public class GameControl : MonoBehaviour
         {
             GridManager.correctPositionToGrid(_inActiveCubeObjects[i].transform);
         }
-
         if (allGolasHaveBeenReached())
+        {
             SceneManager.LoadScene(sceneToLoad);
+        }
         else if (Input.GetKeyDown(KeyCode.Escape))
             if (sceneToLoadOnEscape > -1)
                 SceneManager.LoadScene(sceneToLoadOnEscape);
@@ -113,6 +117,31 @@ public class GameControl : MonoBehaviour
     /// </summary>
     void Start()
     {
+        if (_cubeObjects.Count < 1)
+        {
+            GridManager.loadGridFromFile(false);
+
+            Grid grid = GridManager.getGrid();
+            for (int x = 0; x < grid.getWidth(); x++)
+            {
+                for (int y = 0; y < grid.getHeight(); y++)
+                {
+                    GameObject gameObject = grid.getObjectAt(x, y);
+                    if (gameObject != null)
+                    {
+                        if (gameObject.tag == "Player")
+                            _cubeObjects.Add(gameObject);
+                        else if (gameObject.tag == "InactivePlayer")
+                            _inActiveCubeObjects.Add(gameObject);
+                        else if (gameObject.tag == "Goal")
+                        {
+                            _goals.Add(gameObject);
+                            grid.setObjectAt(x, y, null);
+                        }
+                    }
+                }
+            }
+        }
         initCubeController();
     }
 
