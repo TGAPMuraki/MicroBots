@@ -1,0 +1,188 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon (TM) R9 Fury Series (ID=0x7300)
+    Vendor:   ATI
+    VRAM:     3072 MB
+    Driver:   22.19.162.4
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.192 seconds
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.090853 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.242841 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 335.
+Total: 0.238831 ms (FindLiveObjects: 0.027406 ms CreateObjectMapping: 0.013854 ms MarkObjects: 0.180403 ms  DeleteObjects: 0.016263 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.270755 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 343.
+Total: 0.245155 ms (FindLiveObjects: 0.037345 ms CreateObjectMapping: 0.031020 ms MarkObjects: 0.171066 ms  DeleteObjects: 0.004818 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.278586 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 510.
+Total: 0.206304 ms (FindLiveObjects: 0.029816 ms CreateObjectMapping: 0.015962 ms MarkObjects: 0.154803 ms  DeleteObjects: 0.005119 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.363818 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 277.
+Total: 0.241842 ms (FindLiveObjects: 0.033129 ms CreateObjectMapping: 0.015359 ms MarkObjects: 0.184318 ms  DeleteObjects: 0.008432 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.338519 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 335.
+Total: 0.181608 ms (FindLiveObjects: 0.025298 ms CreateObjectMapping: 0.014155 ms MarkObjects: 0.133420 ms  DeleteObjects: 0.008432 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.326472 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 335.
+Total: 0.195462 ms (FindLiveObjects: 0.023190 ms CreateObjectMapping: 0.021684 ms MarkObjects: 0.145467 ms  DeleteObjects: 0.004818 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.260515 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 343.
+Total: 0.179198 ms (FindLiveObjects: 0.021082 ms CreateObjectMapping: 0.015058 ms MarkObjects: 0.137636 ms  DeleteObjects: 0.004517 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.290934 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 510.
+Total: 0.197269 ms (FindLiveObjects: 0.028912 ms CreateObjectMapping: 0.014757 ms MarkObjects: 0.147575 ms  DeleteObjects: 0.005119 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.385503 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 277.
+Total: 0.248769 ms (FindLiveObjects: 0.025900 ms CreateObjectMapping: 0.027406 ms MarkObjects: 0.186728 ms  DeleteObjects: 0.008131 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.390924 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 335.
+Total: 0.212629 ms (FindLiveObjects: 0.034635 ms CreateObjectMapping: 0.030117 ms MarkObjects: 0.137335 ms  DeleteObjects: 0.009637 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.284308 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 343.
+Total: 0.174982 ms (FindLiveObjects: 0.019275 ms CreateObjectMapping: 0.015058 ms MarkObjects: 0.135528 ms  DeleteObjects: 0.004517 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.285513 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 510.
+Total: 0.232205 ms (FindLiveObjects: 0.043369 ms CreateObjectMapping: 0.028009 ms MarkObjects: 0.154502 ms  DeleteObjects: 0.005421 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.474650 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 277.
+Total: 0.236421 ms (FindLiveObjects: 0.037646 ms CreateObjectMapping: 0.014757 ms MarkObjects: 0.175885 ms  DeleteObjects: 0.007228 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.358999 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 357.
+Total: 0.259913 ms (FindLiveObjects: 0.034936 ms CreateObjectMapping: 0.015962 ms MarkObjects: 0.204196 ms  DeleteObjects: 0.004517 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.874007 ms
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 266.
+Total: 0.219857 ms (FindLiveObjects: 0.019877 ms CreateObjectMapping: 0.014757 ms MarkObjects: 0.167452 ms  DeleteObjects: 0.016865 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.262623 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 375.
+Total: 0.283404 ms (FindLiveObjects: 0.025599 ms CreateObjectMapping: 0.013854 ms MarkObjects: 0.237927 ms  DeleteObjects: 0.005421 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.769500 ms
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 297.
+Total: 0.339423 ms (FindLiveObjects: 0.018371 ms CreateObjectMapping: 0.022286 ms MarkObjects: 0.282501 ms  DeleteObjects: 0.015359 ms)
+
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon (TM) R9 Fury Series (ID=0x7300)
+    Vendor:   ATI
+    VRAM:     3072 MB
+    Driver:   22.19.162.4
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.194 seconds
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\Datein Von Muraki\Privat\Programmierung\Unity\Projects\MicroBots_2\MicroBots\MicroBots_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.048086 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.421738 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 335.
+Total: 0.206304 ms (FindLiveObjects: 0.035237 ms CreateObjectMapping: 0.015058 ms MarkObjects: 0.143961 ms  DeleteObjects: 0.011444 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.269550 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 343.
+Total: 0.215640 ms (FindLiveObjects: 0.021383 ms CreateObjectMapping: 0.017468 ms MarkObjects: 0.171669 ms  DeleteObjects: 0.004517 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.303884 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 510.
+Total: 0.220760 ms (FindLiveObjects: 0.040658 ms CreateObjectMapping: 0.015661 ms MarkObjects: 0.159020 ms  DeleteObjects: 0.004818 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.378576 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 510.
+Total: 0.203292 ms (FindLiveObjects: 0.024997 ms CreateObjectMapping: 0.014757 ms MarkObjects: 0.157815 ms  DeleteObjects: 0.004818 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2598 -> priority: 1 
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 3bcc -> priority: 1 

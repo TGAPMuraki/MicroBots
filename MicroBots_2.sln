@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{BCD1270C-46E5-9CF3-E9BA-900BEC5DBC6B}") = "MicroBots_2", "Assembly-CSharp.csproj", "{B6EF8610-545E-564C-9605-0CB47ED8BE05}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroBots_2", "MicroBots_2.csproj", "{64248FDB-67ED-6877-4F3E-1362831FE000}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B6EF8610-545E-564C-9605-0CB47ED8BE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6EF8610-545E-564C-9605-0CB47ED8BE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6EF8610-545E-564C-9605-0CB47ED8BE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6EF8610-545E-564C-9605-0CB47ED8BE05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64248FDB-67ED-6877-4F3E-1362831FE000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64248FDB-67ED-6877-4F3E-1362831FE000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64248FDB-67ED-6877-4F3E-1362831FE000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64248FDB-67ED-6877-4F3E-1362831FE000}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
